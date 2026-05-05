@@ -42,21 +42,6 @@ deploy() {
 
 echo "==========DEPLOYMENT STARTED=========="
 
-if [[ -d "django-notes-app" ]]; then
-        echo "the code dir already exist"
-        cd django-notes-app
-else
-        clone
-        cd django-notes-app
-fi
-
-if ! install_req; then
-        echo "Installation Failed"
-        exit 1
-fi
-
-echo "==========deployment strted=========="
-
 clone
 
 if ! install_req; then
